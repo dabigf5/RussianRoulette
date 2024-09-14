@@ -2,6 +2,7 @@ package tools.important.russianroulette.gui
 
 import tools.important.russianroulette.Revolver
 import tools.important.russianroulette.VERSION
+import tools.important.russianroulette.shutdownComputer
 import java.awt.BorderLayout
 import java.awt.FlowLayout
 import javax.swing.JButton
@@ -40,7 +41,7 @@ object RussianRouletteWindow : JFrame(VERSION) {
 
             if (bang) {
                 statusLabel.text = "BANG!"
-//                shutdownComputer()
+                shutdownComputer()
                 return
             }
             statusLabel.text = "Click"
@@ -50,7 +51,7 @@ object RussianRouletteWindow : JFrame(VERSION) {
 
         add(buttons, BorderLayout.CENTER)
 
-        setSize(250, 250)
+        setSize(500, 250)
         defaultCloseOperation = EXIT_ON_CLOSE
     }
 }

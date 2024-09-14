@@ -4,11 +4,13 @@ import kotlin.random.Random
 
 
 object Revolver {
+    private const val CHAMBER_SIZE = 6
     private var rotation: Int = 0
         set(newRotation) {
             field = newRotation % CHAMBER_SIZE
         }
-    private const val CHAMBER_SIZE = 6
+
+
     private val bullets: MutableList<Boolean> = mutableListOf()
 
     fun load() {
